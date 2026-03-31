@@ -1,0 +1,192 @@
+# Hugo Site Configuration
+baseURL = "https://iliagrishmanovskii.com"
+languageCode = "en-us"
+title = "Ilia Grishmanovskii"
+theme = "careercanvas"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      tagline = "Physicist. Software developer. Data analyst. Carbonara lover"
+      hero_description = "Highly motivated and dedicated IT professional with a strong academic background in theoretical physics, specializing in advanced programming and complex numerical simulations. Proven ability to deliver state-of-the-art results with limited financial, technical, and time resources. Quick to learn and fast to adapt."
+      # hero_description = "Theoretical physicist and researcher with expertise in advanced scientific programming and simulating nuclear matter under the most extreme known conditions. After years of fundamental research, I am passionate about applying my academic background to real-world problems."
+      hero_location = "Frankfurt am Main, Germany"
+      resume_url = "https://www.dropbox.com/scl/fi/bt0zimgovlzzb53yp8bna/Grishmanovskii_CV.pdf?rlkey=8afieuukcznt472jzy2mtn5ed&st=0vsr8nvi&dl=0"
+      collab_tags = [
+        # "Scientific Programming",
+        # "Numerical Methods and Algorithms"
+      ]
+
+  # [languages.de]
+  #   contentDir = "content/de"
+  #   languageName = "Deutsch"
+  #   languageCode = "de-de"
+  #   weight = 2
+  #   [languages.de.params]
+  #     tagline = "Physiker. Programmierer. Carbonara-Liebhaber."
+  #     hero_description = "Theoretischer Physiker und Forscher mit Expertise in fortgeschrittener wissenschaftlicher Programmierung sowie in der Simulation von Kernmaterie unter den extremsten bekannten Bedingungen. Nach Jahren grundlegender Forschung bin ich motiviert, meinen akademischen Hintergrund zur Lösung praxisnaher Probleme einzusetzen."
+  #     hero_location = "Frankfurt am Main, Deutschland"
+  #     resume_url = "https://www.dropbox.com/scl/fi/4mcp4g9o50sdh8uh5zo8x/Grishmanovskii_Lebenslauf.pdf?rlkey=v1wwhi0ngdpg3z4slm18nh0ua&st=ixetx4p8&dl=0"
+  #     collab_tags = [
+  #       "Wissenschaftliches Programmieren",
+  #       "Numerische Methoden und Algorithmen"
+  #     ]
+
+  # [languages.ru]
+  #   contentDir = "content/ru"
+  #   languageName = "Русский"
+  #   languageCode = "ru-ru"
+  #   weight = 3
+  #   [languages.ru.params]
+  #     title = "Илья Гришмановский"
+  #     copyright = "Илья Гришмановский"
+  #     name = "Илья Гришмановский"
+  #     author = "Илья Гришмановский"
+  #     firstName = "Илья"
+  #     lastName = "Гришмановский"
+  #     tagline = "Физик. Программист. Любитель карбонары."
+  #     hero_description = "Физик теоретик и исследователь с опытом работы в научном программировании и моделировании ядерной материи в экстремальных условиях."
+  #     hero_location = "Франкфурт-на-Майне, Германия"
+  #     resume_url = "https://www.dropbox.com/scl/fi/37uuaxcnu0r8m01s2k4x0/Grishmanovskii_CV.pdf?rlkey=mnlc2eg2vd0cxh68im4h4i7jx&st=29aws7ln&dl=0"
+  #     collab_tags = [
+  #       "Научное программирование",
+  #       "Численные методы и алгоритмы"
+  #     ]
+
+[build]
+  writeStats = true
+
+[params]
+name = "Ilia Grishmanovskii"
+firstName = "Dr. Ilia"
+lastName = "Grishmanovskii"
+email = "ilia.grishmanovskii@gmail.com"
+profile_image = "/images/Ilia_Grishmanovskii.jpg"
+author = "Ilia Grishmanovskii"
+# og_image = "images/og.png"
+description = "Theoretical physicist and researcher with expertise in advanced scientific programming and simulating nuclear matter under the most extreme known conditions."
+linkedin_url = "https://www.linkedin.com/in/ilia-grishmanovskii/"
+linkedin_text = "linkedin.com/in/ilia-grishmanovskii"
+# github_url = "https://github.com/iliagrishmanovskii"
+# github_text = "github.com/iliagrishmanovskii"
+# calendly_url = "https://calendly.com/"
+# calendly_height = "700px"
+copyright = "Dr. Ilia Grishmanovskii"
+# resume_label = "View CV"
+
+# Form: set in config or config.local.toml. CI: HUGO_PARAMS_FORMSPREEENDPOINT (no underscores)
+formspreeendpoint = ""
+
+# [[params.social]]
+# icon = "linkedin-in"
+# url = "https://www.linkedin.com/in/ilia-grishmanovskii/"
+
+# [[params.social]]
+# icon = "xing"
+# url = "https://www.xing.com/profile/Ilia_Grishmanivskii/web_profiles"
+
+# [[params.social]]
+# icon = "github"
+# url = "https://github.com/iliagrishmanovskii"
+
+# [[params.social]]
+# icon = "instagram"
+# url = "https://www.instagram.com/grishmanovsky.i/"
+
+sectionPagesMenu = 'main'
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[server]
+  [[server.headers]]
+    for = "/**/*.css"
+    [server.headers.values]
+      Content-Type = "text/css"
+
+# Dynamic Color Palettes Configuration
+# Multiple color palettes that will be randomly selected on each page load
+# Each palette contains main_color, second_color, and third_color
+[params.color_palettes]
+  [[params.color_palettes.palette]]
+    name = "grishmanovskii"
+    main_color = "#474A51"    # Graphite Gray – ultra professional, metallic, predominant
+    second_color = "#F77F00"  # Mario Red – subtle accent, inspired by Super Mario
+    third_color = "#0F4C75"   # Luigi Green – subtle accent, inspired by Luigi
+
+  # [[params.color_palettes.palette]]
+  #   name = "professional"
+  #   main_color = "#474A51"    # Graphite Gray – ultra professional, metallic, predominant
+  #   second_color = "#E52521"  # Mario Red – subtle accent, inspired by Super Mario
+  #   third_color = "#3CB043"   # Luigi Green – subtle accent, inspired by Luigi
+  
+  # [[params.color_palettes.palette]]
+  #   name = "ocean"
+  #   main_color = "#1E40AF"    # Vibrant Blue – energetic and modern
+  #   second_color = "#06B6D4"  # Cyan – fresh and innovative
+  #   third_color = "#10B981"   # Emerald – growth and success
+  
+  # [[params.color_palettes.palette]]
+  #   name = "sunset"
+  #   main_color = "#DC2626"    # Vibrant Red – warm and energetic
+  #   second_color = "#F59E0B"  # Amber – optimistic and bright
+  #   third_color = "#EF4444"   # Red Orange – passion and creativity
+  # 
+  # [[params.color_palettes.palette]]
+  #   name = "forest"
+  #   main_color = "#059669"    # Deep Emerald – natural and stable
+  #   second_color = "#10B981"  # Green – growth and success
+  #   third_color = "#F59E0B"   # Golden Yellow – wisdom and clarity
+  # 
+  # [[params.color_palettes.palette]]
+  #   name = "fire"
+  #   main_color = "#EA580C"    # Orange – creativity and enthusiasm
+  #   second_color = "#DC2626"  # Red – passion and energy
+  #   third_color = "#F59E0B"   # Amber – warmth and optimism
+  
+  # [[params.color_palettes.palette]]
+  #   name = "steel"
+  #   main_color = "#374151"    # Steel Gray – industrial and reliable
+  #   second_color = "#6B7280"  # Medium Gray – balanced and professional
+  #   third_color = "#10B981"   # Emerald – success and precision
+  
+  # [[params.color_palettes.palette]]
+  #   name = "navy"
+  #   main_color = "#1E3A8A"    # Navy Blue – authoritative and trustworthy
+  #   second_color = "#3B82F6"  # Bright Blue – innovation and clarity
+  #   third_color = "#F59E0B"   # Amber – excellence and achievement
+  
+  # [[params.color_palettes.palette]]
+  #   name = "charcoal"
+  #   main_color = "#1F2937"    # Charcoal – sophisticated and modern
+  #   second_color = "#EF4444"  # Red – energy and determination
+  #   third_color = "#22C55E"   # Green – growth and stability
+  
+  # [[params.color_palettes.palette]]
+  #   name = "slate"
+  #   main_color = "#475569"    # Slate Blue – professional and calm
+  #   second_color = "#0EA5E9"  # Sky Blue – clear thinking and progress
+  #   third_color = "#F97316"   # Orange – creativity and innovation
+  
+  # [[params.color_palettes.palette]]
+  #   name = "midnight"
+  #   main_color = "#0F172A"    # Midnight Blue – deep and authoritative
+  #   second_color = "#8B5CF6"  # Purple – innovation and technology
+  #   third_color = "#06B6D4"   # Cyan – precision and clarity
+
+# Not used
+[params.pexels]
+  queries = ["skyscrapers", "sky and clouds"]

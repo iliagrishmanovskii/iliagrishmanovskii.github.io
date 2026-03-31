@@ -1,0 +1,75 @@
+<section id="education" class="py-12 bg-bg dark:bg-bg border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{ with .Site.GetPage "education" }}
+    <h2 class="text-3xl font-bold text-center mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h2>
+    <p class="text-lg text-center mb-12 text-gray-700 dark:text-text-tertiary italic">{{ .Params.intro }}</p>
+
+    <!-- Education Card Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {{ range $index, $exp := .Params.positions }}
+      <div class="achievements-card bg-bg dark:bg-bg rounded-xl shadow-lg border border-border-primary card-hover flex flex-col overflow-hidden" data-animate>
+        <!-- Top accent bar -->
+        <div class="h-1 bg-gradient-to-r from-second to-second-dark flex-shrink-0"></div>
+
+        <div class="p-6 flex flex-col flex-1">
+          <!-- Icon -->
+          <div class="flex justify-center mb-4">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center" style="background-color: color-mix(in srgb, var(--color-second) 15%, var(--color-bg));">
+              <i class="fas fa-graduation-cap text-2xl text-second dark:text-second-light"></i>
+            </div>
+          </div>
+
+          <!-- Period badge -->
+          <div class="flex justify-center mb-4">
+            <span class="inline-flex items-center bg-gradient-primary text-white px-4 py-1.5 rounded-full text-xs font-medium shadow">
+              <i class="fas fa-calendar-alt mr-1.5"></i>{{ $exp.period }}
+            </span>
+          </div>
+
+          <!-- Degree -->
+          <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary text-center mb-1">{{ $exp.role }}</h3>
+
+          <!-- School -->
+          <h4 class="text-second dark:text-second-light font-semibold text-base text-center mb-4">
+            {{ if $exp.school_url }}
+            <a href="{{ $exp.school_url }}" target="_blank" rel="noopener noreferrer" class="company-link">
+              {{ $exp.school }}<i class="fas fa-external-link-alt ml-1.5 opacity-60 text-xs"></i>
+            </a>
+            {{ else }}
+            {{ $exp.school }}
+            {{ end }}
+          </h4>
+
+          <!-- Location & grade badges -->
+          <div class="flex flex-wrap gap-2 justify-center mb-8">
+            {{ if $exp.location }}
+            <span class="inline-flex items-center bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
+              <i class="fas fa-map-marker-alt mr-1"></i>{{ $exp.location }}
+            </span>
+            {{ end }}
+            {{ if $exp.grade }}
+            <span class="inline-flex items-center bg-third text-white px-3 py-1 rounded-full text-xs font-medium">
+              <i class="fas fa-trophy mr-1"></i>{{ $exp.grade }}
+            </span>
+            {{ end }}
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t border-border-primary mb-4"></div>
+
+          <!-- Bullet points -->
+          <ul class="space-y-2 text-sm text-gray-700 dark:text-text-secondary">
+            {{ range $exp.bullet_points }}
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-second dark:text-second-light mr-2 mt-0.5 flex-shrink-0"></i>
+              <span>{{ . | markdownify }}</span>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
