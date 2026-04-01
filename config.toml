@@ -71,8 +71,8 @@ profile_image = "/images/Ilia_Grishmanovskii.jpg"
 author = "Ilia Grishmanovskii"
 # og_image = "images/og.png"
 description = "Theoretical physicist and researcher with expertise in advanced scientific programming and simulating nuclear matter under the most extreme known conditions."
-linkedin_url = "https://www.linkedin.com/in/ilia-grishmanovskii/"
-linkedin_text = "linkedin.com/in/ilia-grishmanovskii"
+linkedin_url = "https://www.linkedin.com/in/iliagrishmanovskii"
+linkedin_text = "linkedin.com/in/iliagrishmanovskii"
 # github_url = "https://github.com/iliagrishmanovskii"
 # github_text = "github.com/iliagrishmanovskii"
 # calendly_url = "https://calendly.com/"
@@ -85,7 +85,7 @@ formspreeendpoint = ""
 
 # [[params.social]]
 # icon = "linkedin-in"
-# url = "https://www.linkedin.com/in/ilia-grishmanovskii/"
+# url = "https://www.linkedin.com/in/iliagrishmanovskii/"
 
 # [[params.social]]
 # icon = "xing"
@@ -123,9 +123,9 @@ sectionPagesMenu = 'main'
 [params.color_palettes]
   [[params.color_palettes.palette]]
     name = "grishmanovskii"
-    main_color = "#474A51"    # Graphite Gray – ultra professional, metallic, predominant
-    second_color = "#F77F00"  # Mario Red – subtle accent, inspired by Super Mario
-    third_color = "#0F4C75"   # Luigi Green – subtle accent, inspired by Luigi
+    main_color = "#474A51"
+    second_color = "#F77F00"
+    third_color = "#0F4C75"
 
   # [[params.color_palettes.palette]]
   #   name = "professional"
